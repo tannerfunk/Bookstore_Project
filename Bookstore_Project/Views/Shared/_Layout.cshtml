@@ -3,6 +3,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+
+    <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/lib/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="~/lib/css/bootstrap-utilities.css" rel="stylesheet" />
+
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -10,6 +16,11 @@
         @RenderBody()
     </div>
 
-    <footer>Goodbye</footer>
+    <div page-model="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
+         page-class="btn" page-class-normal="btn-outline-dark"
+         page-class-selected="btn-primary" class="btn-group pull-right m-1">
+    </div>
+
+    <footer>Built By Tanner Funk Solutions</footer>
 </body>
 </html>
