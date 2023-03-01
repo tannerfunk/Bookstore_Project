@@ -16,10 +16,12 @@ namespace Bookstore_Project.Controllers
 
         public IActionResult Index(int pageNum = 1)
         {
-            int pageSize = 5;
+            //books per page
+            int pageSize = 10;
 
             var x = new BooksViewModel
             {
+                //grabbing the right books for the right pages
                 Books = repo.Books
                 .OrderBy(b => b.Title)
                 .Skip((pageNum - 1) * pageSize)

@@ -43,8 +43,9 @@ namespace Bookstore_Project.Infastructure
             {
                 TagBuilder tb = new TagBuilder("a");
                 tb.Attributes["href"] = uh.Action(PageAction, new { pageNum = i });
-                if (PageClassesEnabled)
 
+                // do the highlighted page functionality
+                if (PageClassesEnabled)
                 {
                     tb.AddCssClass(PageClass);
                     tb.AddCssClass(i == PageModel.CurrentPage
