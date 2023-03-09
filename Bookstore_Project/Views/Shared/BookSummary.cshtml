@@ -18,7 +18,11 @@
 
             <li>ISBN: @Model.Isbn</li>
         </ul>
-        <h5 class="display-6">Published by @Model.Publisher</h5>
+
+        <h5 class="display-6">
+            Published by
+            <small class="text-muted">@Model.Publisher</small>
+        </h5>
 
         <form method="post" asp-page="/Purchase">
 
