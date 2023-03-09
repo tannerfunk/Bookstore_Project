@@ -12,9 +12,25 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @RenderBody()
+
+    <div class="bg-dark text-white p-2">
+        <span class="navbar-brand m-lg-2">Tanner's Bookstore</span>
     </div>
+
+    <div class="row m-1 p-1">
+        <div id="types" class="col-3">
+            <vc:categories></vc:categories>
+        </div>
+
+        <div class="col-9">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+
+
 
     <div page-model="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
          page-class="btn" page-class-normal="btn-outline-dark"
