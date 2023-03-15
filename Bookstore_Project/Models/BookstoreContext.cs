@@ -20,6 +20,7 @@ namespace Bookstore_Project.Models
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
 
         
     }
